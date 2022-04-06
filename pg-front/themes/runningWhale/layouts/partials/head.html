@@ -1,0 +1,57 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {{ $title := print .Site.Title " | " .Title }}
+  {{ if .IsHome }}
+    {{ $title =
+      .Site.Title
+    }}
+  {{ end }}
+  <title>{{ $title }}</title>
+  {{ $style := resources.Get "/sass/main.scss" | resources.ToCSS |
+    resources.Minify | resources.Fingerprint
+  }}
+  <link
+    rel="preload"
+    href="{{ $style.Permalink }}"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  {{ $mathilde := resources.Get "/fonts/mathilde.otf" }}
+  {{ $ralewayMedium :=
+    resources.Get "/fonts/Raleway-Medium.ttf"
+  }}
+  {{ $ralewayRegular :=
+    resources.Get "/fonts/Raleway-Regular.ttf"
+  }}
+  <link
+    rel="preload"
+    as="font"
+    href="{{ $mathilde.Permalink }}"
+    type="font/otf"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="font"
+    href="{{ $ralewayMedium.Permalink }}"
+    type="font/ttf"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    as="font"
+    href="{{ $ralewayRegular.Permalink }}"
+    type="font/ttf"
+    crossorigin
+  />
+  <meta name="title" content="Praticienne Bien-être" />
+  <meta
+    name="description"
+    content="Pauline Gorlier, Praticienne Bien-être et Soins Énergétiques."
+  />
+  <meta name="keywords" content="Bien-être, Soins, Énergétique" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="language" content="French" />
+</head>

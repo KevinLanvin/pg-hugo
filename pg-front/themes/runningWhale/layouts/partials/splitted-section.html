@@ -1,0 +1,29 @@
+<section
+  class="splitted-section {{ if .alt }}
+    splitted-section--alt
+  {{ end }} {{ if .inverted }}splitted-section--inverted{{ end }}"
+>
+  <div class="splitted-section__image {{ if .rounded }}rounded{{ end }}">
+    <img
+      src="{{ site.Params.apiURL }}{{ .context.image.url }}"
+      alt="{{ .context.image.alternativeText }}"
+    />
+  </div>
+  <div class="splitted-section__text">
+    <h2>{{ .context.title }}</h2>
+    <p>{{ .context.paragraph }}</p>
+    {{ if ne .context.quote nil }}
+      <div class="blockquote">
+        <img src="/img/quote.svg" alt="Quote mark" />
+        <p>{{ .context.quote }}</p>
+        <p>{{ .context.quoteAuthor }}</p>
+        <img src="/img/quote.svg" alt="End of quote mark" />
+      </div>
+    {{ end }}
+    {{ if ne .context.link nil }}
+      <a href="{{ .context.link.href }}" class="button button--alt"
+        >{{ .context.link.label }}</a
+      >
+    {{ end }}
+  </div>
+</section>

@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_utils_sections",
+  "info": {
+    "displayName": "Section",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "paragraph": {
+      "type": "richtext"
+    },
+    "quote": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "utils.link"
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "quoteAuthor": {
+      "type": "string"
+    }
+  }
+}

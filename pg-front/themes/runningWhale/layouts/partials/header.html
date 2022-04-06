@@ -1,0 +1,65 @@
+{{ $data := getJSON "/data/header.json" }}
+{{ $currentPage := . }}
+<div class="header">
+  <div class="topbar">
+    <ul class="topbar-contact">
+      <li>
+        <img
+          src="/img/phone.svg"
+          alt="Numéro de téléphone"
+          width="16"
+          height="16"
+        />
+        {{ $data.phoneNumber }}
+      </li>
+      <li>
+        <a href="mailto:{{ $data.contactMail }}"
+          ><img
+            src="/img/mail.svg"
+            alt="Email"
+            width="16"
+            height="16"
+          />{{ $data.contactMail }}</a
+        >
+      </li>
+    </ul>
+    <ul class="topbar-social">
+      <li>
+        <a
+          href="{{ $data.instagram }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img src="/img/instagram.svg" alt="Instagram" width="16" height="16"
+        /></a>
+      </li>
+      <li>
+        <a href="{{ $data.linkedin }}" target="_blank" rel="noopener noreferrer"
+          ><img src="/img/linkedin.svg" alt="LinkedIn" width="16" height="16"
+        /></a>
+      </li>
+      <li>
+        <a href="{{ $data.facebook }}" target="_blank" rel="noopener noreferrer"
+          ><img src="/img/facebook.svg" alt="Facebook" width="16" height="16"
+        /></a>
+      </li>
+    </ul>
+  </div>
+  <nav class="navbar">
+    <a href="/"
+      ><img
+        src="/img/logo.svg"
+        height="96"
+        width="164.56"
+        alt="Logo return to home"
+        id="logo"
+    /></a>
+    <div class="spacing"></div>
+    {{ range .Site.Menus.header }}
+      <a
+        href="{{ .URL }}"
+        class="{{ if eq $currentPage.RelPermalink .URL }}active{{ end }}"
+        >{{ .Name }}</a
+      >
+    {{ end }}
+  </nav>
+</div>

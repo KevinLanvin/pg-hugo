@@ -1,0 +1,12 @@
+baseURL = "https://pauline-gorlier.com"
+languageCode = "fr-FR"
+title = "Pauline Gorlier - Soins naturels et énergétiques"
+theme = "runningWhale"
+disableKinds = [ "taxonomy", "taxonomyTerm"]
+
+[params]
+  apiURL = "http://localhost:1337"
+
+[menu]
+[[menu.header]]
+

@@ -1,0 +1,324 @@
+@import "vars";
+
+@font-face {
+  font-family: "Mathilde";
+  src: url(/fonts/mathilde.otf);
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url(/fonts/Raleway-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url(/fonts/Raleway-Medium.ttf);
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Mathilde";
+  font-size: 10rem;
+  text-align: center;
+  color: $color-main;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: "Mathilde";
+  font-size: 5rem;
+  line-height: 4rem;
+  text-align: left;
+  color: $color-main;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: "Raleway";
+  font-weight: bold;
+  font-size: 1.2em;
+  color: $color-main;
+}
+
+h4 {
+  font-family: "Mathilde";
+  font-size: 4em;
+  text-align: center;
+  color: $color-main;
+  font-weight: normal;
+}
+
+body,
+li,
+a,
+p,
+button {
+  font-family: "Raleway";
+  font-size: 1em;
+  color: $color-grey;
+  font-weight: normal;
+}
+
+p {
+  line-height: 2.3em;
+  text-align: justify;
+}
+
+.tarifs {
+  font-family: "Raleway";
+  font-size: 3.5em;
+  text-align: center;
+  font-weight: normal;
+}
+
+section {
+  width: 80%;
+  margin: auto;
+  margin-bottom: $gutter-large;
+}
+
+button,
+.button {
+  padding: 0.5rem 3rem;
+  border-radius: 5rem;
+  border: 2px solid $color-button;
+  background-color: $color-button;
+  color: $color-white;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  &:hover {
+    border: 2px solid $color-white;
+    background-color: transparent;
+  }
+  &--alt:hover {
+    background-color: transparent;
+    color: $color-button;
+    border: 2px solid $color-button;
+  }
+}
+
+// Utils
+
+.center {
+  text-align: center;
+}
+
+.white {
+  color: $color-white;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.rounded {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.topbar {
+  background-color: $color-button;
+  padding: 0.2rem $margin;
+  display: flex;
+  height: 1.6rem;
+  &-contact {
+    flex: 1;
+    display: flex;
+    a,
+    li {
+      margin-right: 2rem;
+      color: $color-white;
+      font-size: 0.8rem;
+    }
+    img {
+      margin-right: 0.5rem;
+      vertical-align: bottom;
+    }
+  }
+  &-social {
+    display: flex;
+    align-items: center;
+    a {
+      height: 100%;
+      display: block;
+      margin-left: 1em;
+    }
+    img {
+      vertical-align: middle;
+    }
+  }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  padding: 0 $margin;
+  background-color: $color-white;
+  height: 6rem;
+  box-shadow: $shadow-dark;
+  gap: 2rem;
+  a {
+    display: flex;
+    align-items: center;
+    color: $color-grey;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+  .active {
+    color: $color-accent;
+  }
+  .spacing {
+    flex: 1;
+  }
+}
+
+#banner {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: calc(100vh - 7.6rem);
+  overflow: hidden;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  > img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+  > h1 {
+    color: $color-white;
+    text-shadow: 2px 2px 12px #000;
+  }
+}
+
+.splitted-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  &--alt {
+    margin: 0;
+    padding: 4rem 10%;
+    width: 100%;
+    background-color: $color-main;
+    position: relative;
+    .splitted-section__text {
+      padding: 3rem;
+    }
+    &::after {
+      content: url("/img/flower.svg");
+      position: absolute;
+      bottom: 0;
+      right: 7%;
+      width: 12%;
+    }
+  }
+  &--inverted {
+    .splitted-section__image {
+      order: 1;
+    }
+    .splitted-section__text {
+      order: 0;
+    }
+  }
+  &__image {
+    position: relative;
+    padding-top: 100%;
+    max-height: 0;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0 3rem 3rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: $color-white;
+    .blockquote {
+      position: relative;
+      padding: 1rem 0;
+      p {
+        color: $color-button;
+        line-height: 1.5rem;
+        font-weight: 700;
+        padding: 0 3rem;
+        text-align: center;
+      }
+      img {
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        &:first-of-type {
+          top: 0;
+        }
+        &:last-of-type {
+          bottom: 0;
+          right: 0;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
+// Mobile css
+@media (max-width: $breakpoint) {
+  .header__topbar {
+    display: none;
+  }
+}

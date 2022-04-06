@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <section
+    id="banner"
+    style="background-image: url('{{ .Site.Params.apiURL }}{{ .Params.banner.url }}')"
+  >
+    <h1>{{ .Params.title }}</h1>
+    <button>En savoir plus</button>
+  </section>
+  {{- partial "splitted-section.html" (dict "context" (index .Params.sections 0)
+    "rounded" true)
+  -}}
+  {{- partial "splitted-section.html" (dict "context" (index
+    .Params.sections 1))
+  -}}
+  {{- partial "splitted-section.html" (dict "context" (index .Params.sections 2) "alt" true "inverted" true) }}
+{{ end }}

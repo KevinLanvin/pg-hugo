@@ -1,0 +1,1 @@
+{"phoneNumber":"06.32.80.35.82","contactMail":"contact@pauline-gorlier.com","facebook":"https://www.facebook.com/Pauline-Gorlier-Praticienne-Bien-%C3%AAtre-Lille-101885001591490/","instagram":"https://www.instagram.com/pauline_gorlier_soins_naturels/","linkedin":"https://www.linkedin.com/in/pauline-gorlier-6a13361b6/","logo":"/uploads/logo_c716ec3526.svg"}
