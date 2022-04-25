@@ -18,6 +18,11 @@ fields:
       format: markdown
   label: paragraph
   description: Section text
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: image
 - name: quote
   type: text
   config:
@@ -38,8 +43,12 @@ fields:
   config:
     required: false
   label: linkUrl
-- name: image
-  type: file
-  config:
-    maxSize: 64
-  label: image
+- name: inverted
+  type: boolean
+  label: inverted
+  description: Changes section colors
+  default: false
+- name: withfeather
+  type: boolean
+  label: withFeather
+  description: Indicates if a feather should be added on section.
