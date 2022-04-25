@@ -15,3 +15,8 @@ fields:
     maxSize: 64
   label: banner
   description: Main banner
+- name: sections
+  type: include
+  config: {}
+  template: splittedsection
+  label: sections
