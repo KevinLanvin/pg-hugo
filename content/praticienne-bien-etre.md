@@ -10,5 +10,13 @@ paragraph = "Je vous accompagne, adultes et enfants, dans votre objectif à l’
 quote = "Prends soin de ton corps, c’est le seul endroit permanent dans lequel tu es amené à vivre"
 quoteauthor = "Jim Rohn"
 title = "Une approche globale"
+[[sections]]
+image = "/uploads/quand-consulter.webp"
+linkLabel = ""
+linkurl = ""
+paragraph = "Adultes comme enfants, mes séances s'adressent à toute personne souhaitant améliorer son bien-être physique, émotionnel ou énergétique. Quel que soit le moment de vie dans lequel vous vous trouvez, une réponse adaptée vous sera proposée pour vous accompagner. Vous pouvez donc me consulter pour un besoin particulier ou simplement pour une séance de détente et relaxation."
+quote = ""
+quoteauthor = ""
+title = "Dans quel cas me consulter ?"
 
 +++
