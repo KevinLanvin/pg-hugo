@@ -1,4 +1,17 @@
 ---
 label: Accueil
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+  description: Main title
+  default: Praticienne Bien-être
+- name: banner
+  type: file
+  config:
+    maxSize: 64
+  label: banner
+  description: Main banner
