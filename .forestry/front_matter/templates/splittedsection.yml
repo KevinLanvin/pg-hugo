@@ -1,4 +1,45 @@
 ---
 label: SplittedSection
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: title
+  description: Section title
+- name: paragraph
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: paragraph
+  description: Section text
+- name: quote
+  type: text
+  config:
+    required: false
+  label: quote
+- name: quoteauthor
+  type: text
+  config:
+    required: false
+  label: quoteAuthor
+- name: linkLabel
+  type: text
+  config:
+    required: false
+  label: linkLabel
+- name: linkurl
+  type: text
+  config:
+    required: false
+  label: linkUrl
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: image
