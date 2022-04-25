@@ -23,13 +23,13 @@ title = "Dans quel cas me consulter ?"
 withfeather = false
 [[sections]]
 image = "/uploads/praticienne-soins-naturels.webp"
-inverted = false
+inverted = true
 linkLabel = "Voir mon parcours"
 linkurl = "/qui-suis-je"
 paragraph = "Je suis praticienne bien-être dans la métropole Lilloise. C'est avec un bagage en neuropsychologie et en techniques alternatives que je vous ouvre les portes de mon cabinet. L'écoute de vos besoins reste primordiale dans toutes mes démarches. Ainsi, mes différentes approches vous apporteront bien-être et confiance pour appréhender au mieux votre vie future."
 quote = ""
 quoteauthor = ""
 title = "Qui suis-je ?"
-withfeather = false
+withfeather = true
 
 +++
