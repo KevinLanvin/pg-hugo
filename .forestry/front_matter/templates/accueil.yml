@@ -16,7 +16,15 @@ fields:
   label: banner
   description: Main banner
 - name: sections
-  type: include
-  config: {}
-  template: splittedsection
+  type: field_group_list
+  fields:
+  - name: section
+    type: include
+    config: {}
+    template: splittedsection
+    label: section
+  config:
+    min: 
+    max: 
+    labelField: 
   label: sections
