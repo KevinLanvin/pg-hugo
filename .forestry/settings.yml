@@ -11,11 +11,6 @@ sections:
   label: Pages
   create: all
   match: "*"
-- type: directory
-  path: ''
-  label: Components
-  create: all
-  match: "**/*"
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
